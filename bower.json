@@ -1,0 +1,17 @@
+{
+    "name": "ng2-letter-avatar",
+ 	"main": "ng2letteravatar.js",
+	"version": "1.0.0",
+	"keywords": [
+		"angular2",
+		"ngletteravatar",
+		"letter-avatar",
+		"letteravatar",
+		"gmail like letter icon",
+		"letter image"
+	],
+	"ignore": [
+        "demo",
+        ".travis.yml"
+     ]
+}
