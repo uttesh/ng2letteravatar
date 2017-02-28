@@ -82,22 +82,99 @@ If you are using system.js/systemjs.config.js, don't forget to add 'ng2-letter-a
 
 You can affect how letteravatar operates with the following settings:
 
-name | default | description
------|---------|------------
-`avatar-custom-bg-color` | No default value | Using this attribute set the custom color for avatar background.
-`avatar-dynamic` | false | Set this attribute to true if dynamically avatar needs to be generated on data change.
-`avatar-rotate-degree` | 0 | Set this attribute required degrees of rotation of the avatar.
-`avatar-alphabet-colors` | default color set | Using this attribute set the custom colors for the alphabets only.
-`avatar-char-count` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'
-`avatar-data` |  | Input data i.e. email, names...etc -OR- If image already exists for item, set image URL or image data
-`avatar-height` | 50px | set the height for the avatar
-`avatar-width` | 50px | set the width for the avatar
-`avatar-font-weight` | 400 | set the font weight for the  avatar
-`avatar-font-size` | 30px | set the font size for the letter
-`avatar-shape` | square  | set the shape for the avatar. set 'round' for rounded avatars
-`avatar-font-family` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
-`avatar-border` | false | set the avatarborder to 'true' for the white border to avatar.
-`avatar-custom-border` | no default value | using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code>.
+<table>
+    <thead>
+    <th style="width:40%;">name</th>
+    <th>default</th>
+    <th>description</th>
+</thead>
+
+<tbody>
+    <tr>
+        <td>avatar-custom-bg-color</td>
+        <td>No default value</td>
+        <td>Using this attribute set the custom color for avatar background.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-dynamic</td>
+        <td>false</td>
+        <td>Set this attribute to true if dynamically avatar needs to be generated on data change.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-rotate-degree</td>
+        <td>0</td>
+        <td>Set this attribute required degrees of rotation of the avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-alphabet-colors</td>
+        <td>default color set</td>
+        <td>Using this attribute set the custom colors for the alphabets only.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-char-count</td>
+        <td>1</td>
+        <td>Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-data *</td>
+        <td>No default value</td>
+        <td>Input data i.e. email, names...etc -OR- If image already exists for item, set image URL or image data.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-height</td>
+        <td>50px</td>
+        <td>set the height for the avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-width</td>
+        <td>50px</td>
+        <td>set the width for the avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-font-weight</td>
+        <td>400</td>
+        <td>set the font weight for the  avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-font-size</td>
+        <td>30px</td>
+        <td>set the font size for the letter.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-shape</td>
+        <td>square</td>
+        <td>set the shape for the avatar. set 'round' for rounded avatars.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-font-family</td>
+        <td>HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif</td>
+        <td>set the font Family of the avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-border</td>
+        <td>false</td>
+        <td>set the avatarborder to 'true' for the white border to avatar.</td>
+    </tr>
+
+    <tr>
+        <td>avatar-custom-border</td>
+        <td>no default value</td>
+        <td>using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code>.</td>
+    </tr>
+</tbody>
+</table>
 
 ## Contributions
 
