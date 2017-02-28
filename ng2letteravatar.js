@@ -61,6 +61,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     this.defaultRadius = 'border-radius:50%;';
                     this.deafultDynamic = 'false';
                     this.defaultRotatedeg = '0';
+                    this.defaultAvatarborder = 'false';
                     this.defaultFontWeight = '400';
                     this.defaultFontFamily = 'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif';
                 }
@@ -69,21 +70,22 @@ System.register(['@angular/core'], function(exports_1, context_1) {
             exports_1("LAmeta", LAmeta);
             Attributes = (function () {
                 function Attributes() {
-                    this.alphabetcolors = 'alphabetcolors';
-                    this.textColor = 'textColor';
-                    this.defaultBorder = 'defaultBorder';
-                    this.triangleup = 'triangleup';
-                    this.fontsize = 'fontsize';
-                    this.height = 'height';
-                    this.width = 'width';
-                    this.radius = 'radius';
-                    this.custombgcolor = 'custombgcolor';
-                    this.dynamic = 'dynamic';
-                    this.fontWeight = 'fontWeight';
-                    this.fontFamily = 'fontFamily';
-                    this.shape = 'shape';
-                    this.data = 'data';
-                    this.rotatedeg = 'rotatedeg';
+                    this.alphabetcolors = 'avatar-alphabet-colors';
+                    this.textColor = 'avatar-text-color';
+                    this.defaultBorder = 'avatar-default-border';
+                    this.triangleup = 'avatar-triangle-up';
+                    this.fontsize = 'avatar-font-size';
+                    this.height = 'avatar-height';
+                    this.width = 'avatar-width';
+                    this.radius = 'avatar-radius';
+                    this.avatarcustombgcolor = 'avatar-custom-bg-color';
+                    this.dynamic = 'avatar-dynamic';
+                    this.fontWeight = 'avatar-font-weight';
+                    this.fontFamily = 'avatar-font-family';
+                    this.shape = 'avatar-shape';
+                    this.data = 'avatar-data';
+                    this.rotatedeg = 'avatar-rotate-degree';
+                    this.avatarborder = 'avatar-border';
                 }
                 return Attributes;
             }());
@@ -93,7 +95,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     this._meta = new LAmeta();
                     this.attribute = new Attributes();
                     this.base = 'data:image/svg+xml;base64,';
-                    this.custombgcolor = '';
                     this.charCount = '1';
                     this.letteravatar = el.nativeElement;
                 }
@@ -107,6 +108,13 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     if (!this.textColor) {
                         this.textColor = this.getPropertyValue(this.attribute.textColor) ?
                             this.getPropertyValue(this.attribute.textColor) : this._meta.defaultTextColor;
+                    }
+                    if (!this.avatarcustombgcolor) {
+                        this.avatarcustombgcolor = this.getPropertyValue(this.attribute.avatarcustombgcolor);
+                    }
+                    if (!this.avatarborder) {
+                        this.avatarborder = this.getPropertyValue(this.attribute.avatarborder) ?
+                            this.getPropertyValue(this.attribute.avatarborder) : this._meta.defaultAvatarborder;
                     }
                     if (!this.defaultBorder) {
                         this.defaultBorder = this.getPropertyValue(this.attribute.defaultBorder) ?
@@ -131,9 +139,6 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     if (!this.radius) {
                         this.radius = this.getPropertyValue(this.attribute.radius) ?
                             this.getPropertyValue(this.attribute.radius) : this._meta.defaultRadius;
-                    }
-                    if (!this.custombgcolor) {
-                        this.custombgcolor = this.getPropertyValue(this.attribute.custombgcolor);
                     }
                     if (!this.dynamic) {
                         this.dynamic = this.getPropertyValue(this.attribute.dynamic) ?
@@ -191,8 +196,8 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         colorIndex = Math.floor((c.charCodeAt(0) - 65) % this.alphabetcolors.length);
                         color = this.alphabetcolors[colorIndex];
                     }
-                    if (this.avatarCustomBGColor) {
-                        color = this.avatarCustomBGColor;
+                    if (this.avatarcustombgcolor) {
+                        color = this.avatarcustombgcolor;
                     }
                     this.createSvg(this.width, this.height, color, textTag);
                     var lvcomponent = this.getLVText();
@@ -203,7 +208,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     if (this.avatarBorderStyle) {
                         _style = this.avatarBorderStyle;
                     }
-                    else {
+                    else if (this.avatarborder === 'true') {
                         _style = this.defaultBorder;
                     }
                     if (this.rotatedeg != '0') {
@@ -292,85 +297,81 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     }
                 };
                 __decorate([
-                    core_1.Input('alphabetcolors'), 
-                    __metadata('design:type', Object)
+                    core_1.Input('avatar-alphabet-colors'), 
+                    __metadata('design:type', Array)
                 ], Ng2LetterAvatar.prototype, "alphabetcolors", void 0);
                 __decorate([
-                    core_1.Input('textColor'), 
+                    core_1.Input('avatar-text-color'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "textColor", void 0);
                 __decorate([
-                    core_1.Input('defaultBorder'), 
+                    core_1.Input('avatar-default-border'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "defaultBorder", void 0);
                 __decorate([
-                    core_1.Input('triangleup'), 
+                    core_1.Input('avatar-triangle-up'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "triangleup", void 0);
                 __decorate([
-                    core_1.Input('fontsize'), 
+                    core_1.Input('avatar-font-size'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "fontsize", void 0);
                 __decorate([
-                    core_1.Input('height'), 
+                    core_1.Input('avatar-height'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "height", void 0);
                 __decorate([
-                    core_1.Input('width'), 
+                    core_1.Input('avatar-width'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "width", void 0);
                 __decorate([
-                    core_1.Input('fontWeight'), 
+                    core_1.Input('avatar-font-weight'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "fontWeight", void 0);
                 __decorate([
-                    core_1.Input('fontFamily'), 
+                    core_1.Input('avatar-font-family'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "fontFamily", void 0);
                 __decorate([
-                    core_1.Input('radius'), 
+                    core_1.Input('avatar-radius'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "radius", void 0);
                 __decorate([
-                    core_1.Input('custombgcolor'), 
-                    __metadata('design:type', String)
-                ], Ng2LetterAvatar.prototype, "custombgcolor", void 0);
-                __decorate([
-                    core_1.Input('dynamic'), 
+                    core_1.Input('avatar-dynamic'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "dynamic", void 0);
                 __decorate([
-                    core_1.Input('rotatedeg'), 
+                    core_1.Input('avatar-rotate-degree'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "rotatedeg", void 0);
                 __decorate([
-                    core_1.Input('charCount'), 
+                    core_1.Input('avatar-char-count'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "charCount", void 0);
                 __decorate([
-                    core_1.Input('data'), 
+                    core_1.Input('avatar-data'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "data", void 0);
                 __decorate([
-                    core_1.Input('avatarBorderStyle'), 
+                    core_1.Input('avatar-border-style'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "avatarBorderStyle", void 0);
                 __decorate([
-                    core_1.Input('avatarborder'), 
+                    core_1.Input('avatar-border'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "avatarborder", void 0);
                 __decorate([
-                    core_1.Input('avatarcustomborder'), 
+                    core_1.Input('avatar-custom-border'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "avatarcustomborder", void 0);
                 __decorate([
-                    core_1.Input('shape'), 
+                    core_1.Input('avatar-shape'), 
                     __metadata('design:type', String)
                 ], Ng2LetterAvatar.prototype, "shape", void 0);
                 __decorate([
-                    core_1.Input('avatarCustomBGColor'), 
+                    core_1.Input('avatar-custom-bg-color'), 
                     __metadata('design:type', String)
-                ], Ng2LetterAvatar.prototype, "avatarCustomBGColor", void 0);
+                ], Ng2LetterAvatar.prototype, "avatarcustombgcolor", void 0);
                 Ng2LetterAvatar = __decorate([
                     core_1.Component({
                         selector: 'ng2-letter-avatar',

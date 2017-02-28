@@ -13,10 +13,10 @@ import { Ng2LetterAvatar } from "ng2LAjs/ng2letteravatar";
     selector: 'hello-world',
     template: `
   <div> 
-  <h4> Name: <ng2-letter-avatar data='{{name}}' ></ng2-letter-avatar> </h4> <br/>
+  <h4> Name: <ng2-letter-avatar avatar-data='{{name}}' ></ng2-letter-avatar> </h4> <br/>
   <h4> All alphabets </h4>
   <span *ngFor="let letter of alphabets">
-   <ng2-letter-avatar data='{{letter}}' ></ng2-letter-avatar>
+   <ng2-letter-avatar avatar-data='{{letter}}' ></ng2-letter-avatar>
    </span>
   </div>
   `

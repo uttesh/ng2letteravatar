@@ -12,26 +12,28 @@ export class LAmeta {
     defaultRadius: string = 'border-radius:50%;';
     deafultDynamic: string = 'false';
     defaultRotatedeg: string = '0';
+    defaultAvatarborder:string = 'false';
     defaultFontWeight: string = '400';
     defaultFontFamily: string = 'HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif';
 }
 
 export class Attributes {
-    alphabetcolors: string = 'alphabetcolors';
-    textColor: string = 'textColor';
-    defaultBorder: string = 'defaultBorder';
-    triangleup: string = 'triangleup';
-    fontsize: string = 'fontsize';
-    height: string = 'height';
-    width: string = 'width';
-    radius: string = 'radius';
-    custombgcolor: string = 'custombgcolor';
-    dynamic: string = 'dynamic';
-    fontWeight: string = 'fontWeight';
-    fontFamily: string = 'fontFamily';
-    shape: string = 'shape';
-    data: string = 'data';
-    rotatedeg: string = 'rotatedeg';
+    alphabetcolors: string = 'avatar-alphabet-colors';
+    textColor: string = 'avatar-text-color';
+    defaultBorder: string = 'avatar-default-border';
+    triangleup: string = 'avatar-triangle-up';
+    fontsize: string = 'avatar-font-size';
+    height: string = 'avatar-height';
+    width: string = 'avatar-width';
+    radius: string = 'avatar-radius';
+    avatarcustombgcolor: string = 'avatar-custom-bg-color';
+    dynamic: string = 'avatar-dynamic';
+    fontWeight: string = 'avatar-font-weight';
+    fontFamily: string = 'avatar-font-family';
+    shape: string = 'avatar-shape';
+    data: string = 'avatar-data';
+    rotatedeg: string = 'avatar-rotate-degree';
+    avatarborder:string = 'avatar-border';
 
 }
 
@@ -44,27 +46,26 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
     private imageTag: HTMLElement;
     _meta: LAmeta = new LAmeta();
     attribute: Attributes = new Attributes();
-    @Input('alphabetcolors') alphabetcolors: any;
-    @Input('textColor') textColor: string;
-    @Input('defaultBorder') defaultBorder: string;
-    @Input('triangleup') triangleup: string;
-    @Input('fontsize') fontsize: string;
-    @Input('height') height: string;
-    @Input('width') width: string;
-    @Input('fontWeight') fontWeight: string;
-    @Input('fontFamily') fontFamily: string;
+    @Input('avatar-alphabet-colors') alphabetcolors: string[];
+    @Input('avatar-text-color') textColor: string;
+    @Input('avatar-default-border') defaultBorder: string;
+    @Input('avatar-triangle-up') triangleup: string;
+    @Input('avatar-font-size') fontsize: string;
+    @Input('avatar-height') height: string;
+    @Input('avatar-width') width: string;
+    @Input('avatar-font-weight') fontWeight: string;
+    @Input('avatar-font-family') fontFamily: string;
     base: string = 'data:image/svg+xml;base64,';
-    @Input('radius') radius: string;
-    @Input('custombgcolor') custombgcolor: string = '';
-    @Input('dynamic') dynamic: string;
-    @Input('rotatedeg') rotatedeg: string;
-    @Input('charCount') charCount: string = '1';
-    @Input('data') data: string;
-    @Input('avatarBorderStyle') avatarBorderStyle: string;
-    @Input('avatarborder') avatarborder: string;
-    @Input('avatarcustomborder') avatarcustomborder: string;
-    @Input('shape') shape: string;
-    @Input('avatarCustomBGColor') avatarCustomBGColor: string;
+    @Input('avatar-radius') radius: string;
+    @Input('avatar-dynamic') dynamic: string;
+    @Input('avatar-rotate-degree') rotatedeg: string;
+    @Input('avatar-char-count') charCount: string = '1';
+    @Input('avatar-data') data: string;
+    @Input('avatar-border-style') avatarBorderStyle: string;
+    @Input('avatar-border') avatarborder: string;
+    @Input('avatar-custom-border') avatarcustomborder: string;
+    @Input('avatar-shape') shape: string;
+    @Input('avatar-custom-bg-color') avatarcustombgcolor: string;
 
 
     constructor(el: ElementRef) {
@@ -82,6 +83,15 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
             this.textColor = this.getPropertyValue(this.attribute.textColor) ?
                 this.getPropertyValue(this.attribute.textColor) : this._meta.defaultTextColor;
         }
+        if(!this.avatarcustombgcolor){
+            this.avatarcustombgcolor = this.getPropertyValue(this.attribute.avatarcustombgcolor);
+        }
+        
+        if (!this.avatarborder) {
+            this.avatarborder = this.getPropertyValue(this.attribute.avatarborder) ?
+                this.getPropertyValue(this.attribute.avatarborder) : this._meta.defaultAvatarborder;
+        }
+        
         if (!this.defaultBorder) {
             this.defaultBorder = this.getPropertyValue(this.attribute.defaultBorder) ?
                 this.getPropertyValue(this.attribute.defaultBorder) : this._meta.defaultBorder;
@@ -105,9 +115,6 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
         if (!this.radius) {
             this.radius = this.getPropertyValue(this.attribute.radius) ?
                 this.getPropertyValue(this.attribute.radius) : this._meta.defaultRadius;
-        }
-        if (!this.custombgcolor) {
-            this.custombgcolor = this.getPropertyValue(this.attribute.custombgcolor);
         }
         if (!this.dynamic) {
             this.dynamic = this.getPropertyValue(this.attribute.dynamic) ?
@@ -165,8 +172,8 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
             color = this.alphabetcolors[colorIndex];
         }
 
-        if (this.avatarCustomBGColor) {
-            color = this.avatarCustomBGColor;
+        if (this.avatarcustombgcolor) {
+            color = this.avatarcustombgcolor;
         }
 
         this.createSvg(this.width, this.height, color, textTag);
@@ -177,7 +184,7 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
         var _style = '';
         if (this.avatarBorderStyle) {
             _style = this.avatarBorderStyle;
-        } else {
+        } else if(this.avatarborder === 'true'){
             _style = this.defaultBorder;
         }
 

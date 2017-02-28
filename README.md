@@ -41,7 +41,7 @@ import { Ng2LetterAvatar } from "ng2LAjs/ng2letteravatar";
     selector: 'sample',
     template: `
   <div> 
-   <ng2-letter-avatar data='{{name}}' ></ng2-letter-avatar>
+   <ng2-letter-avatar avatar-data='{{name}}' ></ng2-letter-avatar>
   </div>
   `
 })
@@ -84,20 +84,20 @@ You can affect how letteravatar operates with the following settings:
 
 name | default | description
 -----|---------|------------
-`avatarcustombgcolor` | No default value | Using this attribute set the custom color for avatar background.
-`dynamic` | false | Set this attribute to true if dynamically avatar needs to be generated on data change.
-`rotatedeg` | 0 | Set this attribute required degrees of rotation of the avatar.
-`alphabetcolors` | default color set | Using this attribute set the custom colors for the alphabets only.
-`charCount` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'
-`data` |  | Input data i.e. email, names...etc -OR- If image already exists for item, set image URL or image data
-`height` | 50px | set the height for the avatar
-`width` | 50px | set the width for the avatar
-`fontWeight` | 400 | set the font weight for the  avatar
-`fontSize` | 30px | set the font size for the letter
-`shape` | square  | set the shape for the avatar. set 'round' for rounded avatars
-`fontFamily` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
-`avatarborder` | false | set the avatarborder to 'true' for the white border to avatar.
-`avatarcustomborder` | no default value | using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code>.
+`avatar-custom-bg-color` | No default value | Using this attribute set the custom color for avatar background.
+`avatar-dynamic` | false | Set this attribute to true if dynamically avatar needs to be generated on data change.
+`avatar-rotate-degree` | 0 | Set this attribute required degrees of rotation of the avatar.
+`avatar-alphabet-colors` | default color set | Using this attribute set the custom colors for the alphabets only.
+`avatar-char-count` | 1 | Specifies the number of letters to displayed. to generate combined letter avatar of first name and last name which are separated by space then set the value to '2'
+`avatar-data` |  | Input data i.e. email, names...etc -OR- If image already exists for item, set image URL or image data
+`avatar-height` | 50px | set the height for the avatar
+`avatar-width` | 50px | set the width for the avatar
+`avatar-font-weight` | 400 | set the font weight for the  avatar
+`avatar-font-size` | 30px | set the font size for the letter
+`avatar-shape` | square  | set the shape for the avatar. set 'round' for rounded avatars
+`avatar-font-family` | HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica, Arial,Lucida Grande, sans-serif | set the font Family of the avatar.
+`avatar-border` | false | set the avatarborder to 'true' for the white border to avatar.
+`avatar-custom-border` | no default value | using this attribute set the custom style to avatar borders i.e <code> "border:5px solid black"</code>.
 
 ## Contributions
 
