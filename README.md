@@ -82,7 +82,7 @@ If you are using system.js/systemjs.config.js, don't forget to add 'ng2-letter-a
 
 You can affect how letteravatar operates with the following settings:
 
-name                     | default | description
+attribute name | default | description
 -------------------------|---------|------------
 `avatar-custom-bg-color` | No default value | Using this attribute set the custom color for avatar background.
 `avatar-dynamic` | false | Set this attribute to true if dynamically avatar needs to be generated on data change.
