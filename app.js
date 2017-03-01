@@ -55,6 +55,7 @@ System.register(['@angular/core', '@angular/platform-browser', "@angular/platfor
                 ], HelloWorldAppModule);
                 return HelloWorldAppModule;
             }());
+            enableProdMode();
             platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(HelloWorldAppModule);
         }
     }

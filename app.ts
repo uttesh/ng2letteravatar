@@ -27,4 +27,5 @@ class HelloWorld {
 })
 class HelloWorldAppModule { }
 
+enableProdMode();
 platformBrowserDynamic().bootstrapModule(HelloWorldAppModule);
