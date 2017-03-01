@@ -5,13 +5,13 @@
         'app': 'app',
         'rxjs': 'node_modules/rxjs',
         '@angular': 'node_modules/@angular',
-        'ng2LAjs': 'node_modules/ng2letteravatar'
+        'ng2letteravatar': 'node_modules/ng2letteravatar'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'rxjs': {defaultExtension: 'js'},
-        'ng2LAjs': {main: 'ng2LAjs/ng2letteravatar.js'},
+        'ng2letteravatar': {main: 'ng2letteravatar/ng2letteravatar.js'},
     };
 
     var angularPackages = [

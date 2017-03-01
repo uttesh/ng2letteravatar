@@ -7,22 +7,16 @@ import {
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { Ng2LetterAvatar } from "ng2LAjs/ng2letteravatar";
+import { Ng2LetterAvatar } from "ng2letteravatar/ng2letteravatar";
 
 @Component({
     selector: 'hello-world',
-    template: `
-  <div> 
-  <h4> Name: <ng2-letter-avatar avatar-data='{{name}}' ></ng2-letter-avatar> </h4> <br/>
-  <h4> All alphabets </h4>
-  <span *ngFor="let letter of alphabets">
-   <ng2-letter-avatar avatar-data='{{letter}}' ></ng2-letter-avatar>
-   </span>
-  </div>
-  `
+    templateUrl: './ng2_letteravatar_sample.html'
+
 })
 class HelloWorld {
     name: string = 'testing';
+    customColors: string[] = ["#D93A37", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5C9BBC", "#F5888D", "#9A89B5", "#407887", "#9A89B5", "#5A8770", "#D33F33", "#A2B01F", "#F0B126", "#0087BF", "#F18636", "#0087BF", "#B2B7BB", "#72ACAE", "#9C8AB4", "#5A8770", "#EEB424", "#407887"];
     alphabets: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 }
 

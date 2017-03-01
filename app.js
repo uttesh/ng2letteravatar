@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', "@angular/platform-browser-dynamic", "ng2LAjs/ng2letteravatar"], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', "@angular/platform-browser-dynamic", "ng2letteravatar/ng2letteravatar"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -30,12 +30,13 @@ System.register(['@angular/core', '@angular/platform-browser', "@angular/platfor
             HelloWorld = (function () {
                 function HelloWorld() {
                     this.name = 'testing';
+                    this.customColors = ["#D93A37", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5A8770", "#5C9BBC", "#F5888D", "#9A89B5", "#407887", "#9A89B5", "#5A8770", "#D33F33", "#A2B01F", "#F0B126", "#0087BF", "#F18636", "#0087BF", "#B2B7BB", "#72ACAE", "#9C8AB4", "#5A8770", "#EEB424", "#407887"];
                     this.alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
                 }
                 HelloWorld = __decorate([
                     core_1.Component({
                         selector: 'hello-world',
-                        template: "\n  <div> \n  <h4> Name: <ng2-letter-avatar data='{{name}}' ></ng2-letter-avatar> </h4> <br/>\n  <h4> All alphabets </h4>\n  <span *ngFor=\"let letter of alphabets\">\n   <ng2-letter-avatar data='{{letter}}' ></ng2-letter-avatar>\n   </span>\n  </div>\n  "
+                        templateUrl: './ng2_letteravatar_sample.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], HelloWorld);
