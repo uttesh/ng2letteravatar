@@ -36,7 +36,8 @@
 
     var config = {
         map: map,
-        packages: packages
+        packages: packages,
+		baseURL: '/ng2letteravatar/'
     }
 
     // filterSystemConfig - index.html's chance to modify config before we register it.
