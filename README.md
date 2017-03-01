@@ -35,7 +35,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { Ng2LetterAvatar } from "ng2letteravatar/ng2letteravatar";
 
-// import { Ng2LetterAvatar } from "node_modules/ng2letteravatar/ng2letteravatar.js";  full path js path
+// import { Ng2LetterAvatar } from "node_modules/ng2letteravatar/ng2letteravatar.js";  provide absolute js file path
 
 @Component({
     selector: 'sample',
