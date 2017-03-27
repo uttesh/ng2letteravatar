@@ -289,12 +289,15 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     textTag.innerText = character;
                     return textTag;
                 };
+                /**
+                * Need to work on this in later releases
+                */
                 Ng2LetterAvatar.prototype.ngOnInit = function () {
                 };
+                /**
+                 * Need to work on this in later releases
+                 */
                 Ng2LetterAvatar.prototype.ngOnDestroy = function () {
-                    if (this.letteravatar) {
-                        this.letteravatar.clear();
-                    }
                 };
                 __decorate([
                     core_1.Input('avatar-alphabet-colors'), 

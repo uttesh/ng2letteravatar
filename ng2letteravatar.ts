@@ -271,12 +271,16 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
         return textTag;
     }
 
+     /**
+     * Need to work on this in later releases
+     */
     ngOnInit() {
     }
 
+    /**
+     * Need to work on this in later releases
+     */
     ngOnDestroy() {
-        if (this.letteravatar) {
-            this.letteravatar.clear();
         }
     }
 
