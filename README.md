@@ -33,9 +33,9 @@ import {
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-import { Ng2LetterAvatar } from "ng2LAjs/ng2letteravatar";
+import { Ng2LetterAvatar } from "ng2letteravatar/ng2letteravatar";
 
-// import { Ng2LetterAvatar } from "node_modules/ng2letteravatar/ng2letteravatar.js";  full path js path
+// import { Ng2LetterAvatar } from "node_modules/ng2letteravatar/ng2letteravatar.js";  provide absolute js file path
 
 @Component({
     selector: 'sample',
@@ -68,13 +68,13 @@ If you are using system.js/systemjs.config.js, don't forget to add 'ng2-letter-a
         'app': 'app',
         'rxjs': 'node_modules/rxjs',
         '@angular': 'node_modules/@angular',
-        'ng2LAjs': 'node_modules/ng2letteravatar'
+        'ng2letteravatar': 'node_modules/ng2letteravatar'
     };
 	
  // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'rxjs': {defaultExtension: 'js'},
-        'ng2LAjs': {main: 'ng2LAjs/ng2letteravatar.js'},
+        'ng2LAjs': {main: 'ng2letteravatar/ng2letteravatar.js'},
     };
 ```
 
