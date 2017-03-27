@@ -283,10 +283,6 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
     ngOnDestroy() {
         }
     }
-
-
-}
-
 /**
  * Get the random colors 
  * @returns {String}
