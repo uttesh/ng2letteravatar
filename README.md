@@ -1,8 +1,10 @@
 # ng2letteravatar
 
-<H1 style="color:red">
-I'm moving this component to the part of the [ngu-utility](https://github.com/uttesh/ngu-utility) module, which will be having all the utility component,services and pipes of angular going forward.
 <H1>
+<span style="color:red">
+I'm moving this component to the part of the [ngu-utility](https://github.com/uttesh/ngu-utility) module, which will be having all the utility component,services and pipes of angular going forward.
+</span>
+</H1>
 
 Angular 2 letter avatar component, letter avatar for the given string. Like gmail or google inbox text avatar i.e. First letter of the given data will be the avatar
 
